@@ -9,11 +9,11 @@ public class Operation {
     private Date dateOperation;
     private String reference;
     private String operationDescription;
-    private Double credit;
-    private Double debit;
+    private double credit;
+    private double debit;
 
-    public Operation(String typeAccount, String accountNumber, String accountValuta, Date dateOperation,
-                     String reference, String operationDescription, Double credit, Double debit) {
+    Operation(String typeAccount, String accountNumber, String accountValuta, Date dateOperation,
+              String reference, String operationDescription, double credit, double debit) {
         this.typeAccount = typeAccount;
         this.accountNumber = accountNumber;
         this.accountValuta = accountValuta;
@@ -44,15 +44,15 @@ public class Operation {
         return reference;
     }
 
-    public String getOperationDescription() {
+    String getOperationDescription() {
         return operationDescription;
     }
 
-    public Double getCredit() {
+    double getCredit() {
         return credit;
     }
 
-    public Double getDebit() {
+    double getDebit() {
         return debit;
     }
 

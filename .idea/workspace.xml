@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3407336b-435c-4f3b-bbcb-c4ed7716b131" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ParseBill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="3407336b-435c-4f3b-bbcb-c4ed7716b131" name="Default Changelist" comment="replacing objects with primitives">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Bill/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bill/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Bill/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bill/Operation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OperationAnalyze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OperationAnalyze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ParseBill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParseBill.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,6 +95,21 @@
       <option name="presentableId" value="Default" />
       <updated>1563477201623</updated>
     </task>
+    <task id="LOCAL-00001" summary="INDEX boot variables introduced, ParseBill class introduced">
+      <created>1564173381768</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564173381768</updated>
+    </task>
+    <task id="LOCAL-00002" summary="OperationAnalyze class introduced">
+      <created>1564176604410</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564176604410</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,11 +117,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="INDEX boot variables introduced, ParseBill class introduced" />
+    <MESSAGE value="OperationAnalyze class introduced" />
+    <MESSAGE value="replacing objects with primitives" />
+    <option name="LAST_COMMIT_MESSAGE" value="replacing objects with primitives" />
   </component>
   <component name="masterDetails">
     <states>

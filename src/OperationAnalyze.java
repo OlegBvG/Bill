@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class OperationAnalyze {
+class OperationAnalyze {
     static double debitAll(ArrayList<Operation> bill) {
         return bill.stream().mapToDouble(Operation::getDebit).sum();
     }
@@ -18,7 +18,7 @@ public class OperationAnalyze {
 
         for (Operation op : bill) {
 
-            if (op.getDebit() == Double.valueOf(0)) continue;
+            if (op.getDebit() == 0) continue;
 
             if (itemOfExpenditure.compareTo(op.getOperationDescription()) != 0) {
                 if (debitItem > 0) System.out.println("Статья расходов: " + itemOfExpenditure + " = " + debitItem);

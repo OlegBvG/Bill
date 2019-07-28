@@ -4,18 +4,16 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.Double.valueOf;
+class ParseBill {
 
-public  class ParseBill {
-
-    static final int TYPE_ACCOUNT_INDEX = 0;
-    static final int ACCOUNT_NUMBER_INDEX = 1;
-    static final int ACCOUNT_VALUTA_INDEX = 2;
-    static final int DATE_OPERATION_INDEX = 3;
-    static final int REFERENCE_INDEX = 4;
-    static final int OPERATION_DESCRIPTOR_INDEX = 5;
-    static final int CREDIT_INDEX = 6;
-    static final int DEBIT_INDEX = 7;
+    private static final int TYPE_ACCOUNT_INDEX = 0;
+    private static final int ACCOUNT_NUMBER_INDEX = 1;
+    private static final int ACCOUNT_VALUTA_INDEX = 2;
+    private static final int DATE_OPERATION_INDEX = 3;
+    private static final int REFERENCE_INDEX = 4;
+    private static final int OPERATION_DESCRIPTOR_INDEX = 5;
+    private static final int CREDIT_INDEX = 6;
+    private static final int DEBIT_INDEX = 7;
 
     private static String dateFormat = "dd.MM.yyyy";
     static ArrayList<Operation> loadBillFromFile(String billFile)
@@ -31,7 +29,7 @@ public  class ParseBill {
                 if (0 < skipLine--) continue;
 
                 String[] fragments = line.split(",");
-                ArrayList<String> columnList = new ArrayList<String>();
+                ArrayList<String> columnList = new ArrayList<>();
 
                 for (int i = 0; i < fragments.length; i++) {
                     //Если колонка начинается на кавычки или заканчивается на кавычки
@@ -44,14 +42,14 @@ public  class ParseBill {
                     }
                 }
 
-                int slash = 1;
-                if (columnList.get(5).lastIndexOf("/") > 0){
-                    slash += columnList.get(5).lastIndexOf("/");
+                int indexSlash = 1;
+                if (columnList.get(OPERATION_DESCRIPTOR_INDEX).lastIndexOf("/") > 0){
+                    indexSlash += columnList.get(OPERATION_DESCRIPTOR_INDEX).lastIndexOf("/");
 
-                } else if (columnList.get(5).lastIndexOf("\\") > 0) {
-                    slash += columnList.get(5).lastIndexOf("\\");
+                } else if (columnList.get(OPERATION_DESCRIPTOR_INDEX).lastIndexOf("\\") > 0) {
+                    indexSlash += columnList.get(OPERATION_DESCRIPTOR_INDEX).lastIndexOf("\\");
 
-                } else slash = 17;
+                } else indexSlash = 17;
 
 
                 bill.add(new Operation(
@@ -60,9 +58,9 @@ public  class ParseBill {
                         columnList.get(ACCOUNT_VALUTA_INDEX),
                         (new SimpleDateFormat(dateFormat)).parse(columnList.get(DATE_OPERATION_INDEX)),
                         columnList.get(REFERENCE_INDEX),
-                        columnList.get(OPERATION_DESCRIPTOR_INDEX).substring(slash, 69).trim(),
-                        valueOf(columnList.get(CREDIT_INDEX)),
-                        valueOf(columnList.get(DEBIT_INDEX))
+                        columnList.get(OPERATION_DESCRIPTOR_INDEX).substring(indexSlash, 69).trim(),
+                        Double.parseDouble(columnList.get(CREDIT_INDEX)),
+                        Double.parseDouble(columnList.get(DEBIT_INDEX))
                 ));
 
             }
